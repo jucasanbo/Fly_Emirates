@@ -1,0 +1,21 @@
+.align{ 
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+}
+img{
+    width: 5%;
+    height: 50%;
+}
+.card{
+    margin-left: 30%;
+    width: 40%;
+}
+.card-image {
+    width: 10%;
+    margin-left: 45%;
+}
+div{
+
+    align-items: center;
+}
