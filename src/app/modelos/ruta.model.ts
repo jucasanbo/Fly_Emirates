@@ -1,4 +1,4 @@
-export class AeropuertoModelo{
+export class RutaModelo{
     id?: String;
     origen?: String;
     destino?: String;

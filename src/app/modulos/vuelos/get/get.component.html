@@ -1,1 +1,36 @@
-<p>get works!</p>
+<div class="container">
+    <br>
+    <a routerLink="/admin/create" class="btn purple darken-1">Registrar vuelo</a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Fecha_inicio</th>
+            <th>Hora_inicio</th>
+            <th>Fecha_fin</th>
+            <th>Hora_fin</th>
+            <th>Asientos_vendidos</th>
+            <th>Nombre_piloto</th>
+            <th>Ruta</th>
+            
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.Fecha_inicio}}</td>
+          <td>{{p.Hora_inicio}}</td>
+          <td>{{p.Fecha_fin}}</td>
+          <td>{{p.Hora_fin}}</td>
+          <td>{{p.Asientos_vendidos}}</td>
+          <td>{{p.Nombre_piloto}}</td>
+          <td>{{p.Ruta}}</td>
+          <td>
+            <a routerLink="/admin/edit/{{p.id}}" class="btn">Editar</a>
+            <button class="btn indigo lighten-3" (click)="delete(p.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  

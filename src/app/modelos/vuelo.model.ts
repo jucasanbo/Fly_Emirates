@@ -1,4 +1,4 @@
-export class AeropuertoModelo{
+export class VueloModelo{
     id?: String;
     fecha_inicio?: String;
     hora_inicio?: String;
