@@ -1,16 +1,18 @@
 <!-- Materializa css -->
-<nav >
-    <div class="nav-wrapper  deep-purple lighten-4">
-      <a href="#" class="brand-logo"> 
-        <img src="../../../assets/logomision.png">
-        
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a routerLink="/admin/get">Administrador</a></li>
-        <li><a routerLink="/admin/get">Aeropuertos</a></li>
-        <li><a routerLink="/admin/get">Rutas</a></li>
-        <li><a routerLink="/estaciones/get">Vuelos</a></li>
-        <li><a routerLink="/seguridad/login">Login</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-wrapper #ce93d8 purple lighten-3">
+   <a href="#" class="brand-logo">Grupo 7</a>
+   <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <li *ngIf="activeSession"><a routerLink="/admin/get">Usuarios</a></li>
+    <li *ngIf="activeSession"><a routerLink="/aeropuertos/get">Aeropuertos</a></li>
+    <li *ngIf="activeSession"><a routerLink="/rutas/get">Rutas</a></li>
+    <li *ngIf="activeSession"><a routerLink="/vuelos/get">Vuelos</a></li>
+    <!-- Sesion -->
+  <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+  <li *ngIf="!activeSession"><a
+  routerLink="/admin/create">Registrarse</a></li>
+  <li *ngIf="activeSession"><a
+  routerLink="/seguridad/logout">Cerrar Sesion</a></li>
+   </ul>
+  </div>
+</nav>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../../../servicios/usuario.service';
 import Swal from 'sweetalert2';
-import { UsuarioModelo } from 'src/app/interfaces/usuario';
+import { UsuarioModelo } from
+'src/app/modelos/usuario.model';
 
 @Component({
   selector: 'app-get',

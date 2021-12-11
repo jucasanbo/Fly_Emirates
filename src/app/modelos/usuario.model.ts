@@ -1,7 +1,7 @@
 export class UsuarioModelo{
     id?: String;
     nombre?: String;
-    apellido?: string;
+    apellidos?: string;
     telefono?: string;
     correo?: string;
     token?: string;

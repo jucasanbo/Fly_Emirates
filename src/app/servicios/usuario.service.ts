@@ -19,7 +19,7 @@ token: string = ''
 store(usuario: UsuarioModelo): Observable<UsuarioModelo> {
   return this.http.post<UsuarioModelo>(`${this.url}/usuarios`, {
     nombre: usuario.nombre,
-    apellidos: usuario.apellido,
+    apellidos: usuario.apellidos,
     telefono: usuario.telefono,
     correo: usuario.correo
   });
@@ -34,7 +34,7 @@ getAll(): Observable<UsuarioModelo[]>{
 update(usuario: UsuarioModelo): Observable<UsuarioModelo> {
   return this.http.patch<UsuarioModelo>(`${this.url}/usuarios/${usuario.id}`, {
     nombre: usuario.nombre,
-    apellidos: usuario.apellido,
+    apellidos: usuario.apellidos,
     telefono: usuario.telefono,
     correo: usuario.correo
   }, {
