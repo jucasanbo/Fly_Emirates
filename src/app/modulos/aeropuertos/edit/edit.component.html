@@ -1,6 +1,5 @@
 <div class="container">
-  <h3 class="center-align">Editar Usuario</h3>
-
+  <h3 class="center-align">Editar aeropuerto</h3>
   <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="edit()">
     <input formControlName="id" type="hidden" class="validate">
     <div class="row">
@@ -10,58 +9,43 @@
       </div>
       <div class="input-field col s6">
         <input formControlName="ciudad" type="text" class="validate">
-        <label class="active" for="ciudad">Ciudad</label>
+        <label class="active" for="ciudad">ciudad</label>
       </div>
     </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input formControlName="pais" type="text" class="validate">
-          <label class="active" for="pais">Pais</label>
-        </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="pais" type="text" class="validate">
+        <label class="active" for="pais">pais</label>
       </div>
-
-        <div class="row">
-          <div class="input-field col s12">
-            <input formControlName="coord_x" type="test" class="validate">
-            <label class="active" for="coord_x">Coord_x</label>
-
-          </div>
-        </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <input formControlName="coord_y" type="test" class="validate">
-              <label class="active" for="coord_y">Coord_y</label>
-
-            </div>
-          </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input formControlName="siglas" type="test" class="validate">
-                <label class="active" for="siglas">Siglas</label>
-
-              </div>
-            </div>
-
-              <div class="row">
-                <div class="input-field col s12">
-                  <select class="browser-default">
-                    <option value="" disabled selected>Seleccione la presentacion</option>
-                    <option value="nacional">Nacional</option>
-                    <option value="internacional">Internacional</option>
-                  </select>
-                </div>
-                <input formControlName="tipo" type="test" class="validate">
-                <label class="active" for="tipo">Tipo</label>
-
-              </div>
-
-              <div class="row center-align">
-                <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit"
-                  name="action">Enviar
-                  <i class="material-icons right">send</i>
-                </button>
-              </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="coord_x" type="text" class="validate">
+        <label class="active" for="coord_x">coord_x</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="coord_y" type="text" class="validate">
+        <label class="active" for="coord_y">coord_y</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="siglas" type="text" class="validate">
+        <label class="active" for="siglas">siglas</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="tipo" type="text" class="validate">
+        <label class="active" for="tipo">tipo</label>
+      </div>
+    </div>
+    <div class="row center-align">
+      <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
   </form>
 </div>

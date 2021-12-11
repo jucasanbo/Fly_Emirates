@@ -1,30 +1,27 @@
 <div class="container">
-  <h3 class="center-align">Editar Ruta</h3>
-
+  <h3 class="center-align">Editar ruta</h3>
   <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="edit()">
     <input formControlName="id" type="hidden" class="validate">
     <div class="row">
       <div class="input-field col s6">
         <input formControlName="origen" type="text" class="validate">
-        <label class="active" for="origen">Origen</label>
+        <label class="active" for="origen">origen</label>
       </div>
       <div class="input-field col s6">
         <input formControlName="destino" type="text" class="validate">
-        <label class="active" for="destino">Destino</label>
+        <label class="active" for="destino">destino</label>
       </div>
     </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input formControlName="tiempo_estimado" type="text" class="validate">
-          <label class="active" for="tiempo_estimado">Tiempo_Estimado</label>
-        </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="tiempo_estimado" type="text" class="validate">
+        <label class="active" for="tiempo_estimado">tiempo_estimado</label>
       </div>
-
-        <div class="row center-align">
-          <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit"
-            name="action">Enviar
-            <i class="material-icons right">send</i>
-          </button>
-        </div>
+    </div>
+    <div class="row center-align">
+      <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
   </form>
 </div>

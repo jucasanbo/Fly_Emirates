@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateComponent } from '../aeropuertos/create/create.component';
-import { EditComponent } from '../aeropuertos/edit/edit.component';
-import { GetComponent } from '../aeropuertos/get/get.component';
+import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
+import { GetComponent } from './get/get.component';
+
 
 const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent,
-  },{
+    
+    },{
     path: 'edit/:id',
     component: EditComponent,
-  },{
+    
+    },{
     path: 'get',
     component: GetComponent,
-  },{
+    
+    },{
     path: '',
     redirectTo: 'get'
-  }
-
+    }
 ];
 
 @NgModule({

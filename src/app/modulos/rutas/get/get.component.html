@@ -1,29 +1,26 @@
 <div class="container">
-    <br>
-    <a routerLink="/rutas" class="btn purple darken-1">Registrar Rutas</a>
-   
-    <table class="table responsive">
-      <thead>
-        <tr>
-            <th>Origen</th>
-            <th>Destino</th>
-            <th>Tiempo_Estimado</th>
-            
-            
-        </tr>
-      </thead>
-   
-      <tbody>
-        <tr *ngFor="let p of listado">
-          <td>{{p.origen}}</td>
-          <td>{{p.destino}}</td>
-          <td>{{p.tiempo_estimado}}</td>
-                    <td>
-            <a routerLink="/admin/edit/{{p.id}}" class="btn">Editar</a>
-            <button class="btn indigo lighten-3" (click)="delete(p.id)">Eliminar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-  
+  <br>
+  <a routerLink="/rutas/create" class="btn">Registrar
+    Ruta</a>
+  <table class="table responsive">
+    <thead>
+      <tr>
+        <th>origen</th>
+        <th>destino</th>
+        <th>tiempo_estimado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listado">
+        <td>{{p.origen}}</td>
+        <td>{{p.destino}}</td>
+        <td>{{p.tiempo_estimado}}</td>
+        <td>
+          <a routerLink="/rutas/edit/{{p.id}}" class="btn">Editar</a>
+          <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

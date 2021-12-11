@@ -5,7 +5,8 @@ import { AeropuertosRoutingModule } from './aeropuertos-routing.module';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { GetComponent } from './get/get.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from
+'@angular/forms';
 
 
 @NgModule({
@@ -18,8 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AeropuertosRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+ReactiveFormsModule
   ]
 })
-
 export class AeropuertosModule { }

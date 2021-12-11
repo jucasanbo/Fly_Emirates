@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AeropuertoModelo } from 'src/app/modelos/aeropuerto.model';
-import { AeropuertoService } from 'src/app/servicios/aeropuerto.service';
+import { AeropuertoModelo } from
+'src/app/modelos/aeropuerto.model';
+import { AeropuertoService } from
+'src/app/servicios/aeropuerto.service';
 import Swal from 'sweetalert2'
 
 @Component({
@@ -12,7 +14,6 @@ import Swal from 'sweetalert2'
 })
 export class CreateComponent implements OnInit {
 
-
   fgValidacion = this.fb.group({
     nombre: ['', [Validators.required]],
     ciudad: ['', [Validators.required]],
@@ -20,18 +21,15 @@ export class CreateComponent implements OnInit {
     coord_x: ['', [Validators.required]],
     coord_y: ['', [Validators.required]],
     siglas: ['', [Validators.required]],
-    tipo: ['', [Validators.required]]
-  });
+    tipo: ['', [Validators.required]],
+    });
+
   constructor(private fb: FormBuilder,
     private aeropuertoService: AeropuertoService,
-    private router: Router) { }
+    private router: Router) { } 
 
-
-    
-  
   ngOnInit(): void {
   }
-
   store(){
     let aeropuerto = new AeropuertoModelo();
     aeropuerto.nombre = this.fgValidacion.controls["nombre"].value;
@@ -41,16 +39,15 @@ export class CreateComponent implements OnInit {
     aeropuerto.coord_y = this.fgValidacion.controls["coord_y"].value;
     aeropuerto.siglas = this.fgValidacion.controls["siglas"].value;
     aeropuerto.tipo = this.fgValidacion.controls["tipo"].value;
-    
 
-    this.aeropuertoService.store(aeropuerto).subscribe((data: AeropuertoModelo)=> {
-      Swal.fire('Creado correctamente!', '', 'success')
-      this.router.navigate(['/admin/get']);
+    this.aeropuertoService.store(aeropuerto).subscribe((data:AeropuertoModelo)=> {
+    Swal.fire('Creado correctamente!', '', 'success')
+    this.router.navigate(['/aeropuertos/get']);
     },
     (error: any) => {
-      console.log(error)
-      alert("Error en el envio");
+    console.log(error)
+    alert("Error en el envio");
     })
-  }
+    }
 
-}
+}  
