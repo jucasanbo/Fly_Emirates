@@ -22,7 +22,7 @@ export class EditComponent implements OnInit {
   fgValidacion = this.fb.group({
     id: ['', [Validators.required]],
     nombre: ['', [Validators.required]],
-    apellido: ['', [Validators.required]],
+    apellidos: ['', [Validators.required]],
     telefono: [{value: '', disabled: true}, [Validators.required]],
     correo: [{value: '', disabled: true}, [Validators.required, Validators.email]],
   });
